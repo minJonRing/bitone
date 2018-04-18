@@ -42,8 +42,6 @@ html,body{
   min-height: 100%;
   text-align: center;
   color: #2c3e50;
-  perspective: 1000px;
-  transform-style: preserve-3d;
 }
 .slide-right-enter-active,
 .slide-right-leave-active,

@@ -15,8 +15,11 @@ export default {
 }
 </script>
 <style scoped>
-.listIndex {
+html,body {
     height: 100%;
+}
+.listIndex {
+    height: 1000px;
     width: 100%;
     background-color: pink;
 }

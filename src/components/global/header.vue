@@ -2,7 +2,7 @@
     <header class="flex flex-mid flex-center-3">
         <div class="logo flex-1">
             <div class="img-box">
-                <img class="block w100" src="@/assets/logo.png" alt="">
+                <img class="block h100" src="@/assets/logo.png" alt="">
             </div>
             </div>
             <div class="nav flex-0 h100">
@@ -26,11 +26,11 @@
         data(){
             return {
                 nav:[
-                    {link:"/get/list",txt:"TTQR业务",child:[{link:"/",txt:"dadasad"},{link:"/",txt:"dadasad"},{link:"/",txt:"dadasad"}]},
-                    {link:"/",txt:"案例展示"},
+                    {link:"/get/list",txt:"SINQ业务",child:[{link:"/",txt:"三维产品动画"},{link:"/",txt:"影视广告TVC"},{link:"/",txt:"产地创意工厂"}]},
+                    {link:"/",txt:"案例展示",child:[{link:"/",txt:"作品收集"}]},
                     {link:"/",txt:"新闻动态"},
-                    {link:"/",txt:"TTQR关于"},
-                    {link:"/",txt:"我的客户"},
+                    {link:"/",txt:"关于SINQ",child:[{link:"/",txt:"公司介绍"},{link:"/",txt:"企业文化"}]},
+                    {link:"/",txt:"我们的客户",child:[{link:"/",txt:"合作客户"}]},
                     {link:"/",txt:"加入我们"},
                     {link:"/",txt:"联系我们"}
                 ]
@@ -69,7 +69,9 @@ header .nav a.oneNav{
 header .nav ul.towUl {
   background-color: rgba(0,0,0,.7);
   opacity: 0;
+  transform: matrix(1,0,0,1,20,0);
   transition-duration: 600ms;
+  pointer-events: none;
 }
 header .nav li.towLi {
   padding: 0 6px;
@@ -83,9 +85,6 @@ header .nav a.towNav{
 header .nav li.towLi:last-child a.towNav{
   border: none;
 }
-/* header .nav li.oneLi ul.towUl{
-  width: 0%;
-} */
 header span.navBar {
   position: absolute;
   bottom: 0;
@@ -102,7 +101,8 @@ header .nav li.oneLi:hover span.navBar {
 }
 header .nav li.oneLi:hover ul.towUl{
   opacity: 1;
-  /* width: 100%; */
+  transform: matrix(1,0,0,1,0,0);
+  pointer-events: auto;
 }
 header .nav li.oneLi:hover a.oneNav{
   color: #999;
