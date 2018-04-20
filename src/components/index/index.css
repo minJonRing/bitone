@@ -176,6 +176,7 @@
 .course ul {
     display: flex;
     align-items: center;
+    padding: 50px 0;
 }
 
 .course ul li {
@@ -183,17 +184,95 @@
 }
 
 .course ul li div {
+    position: relative;
     width: 60%;
+    padding: 20px 0 30px;
     margin: 0 auto;
     overflow: hidden;
     color: rgb(43, 43, 43);
+    cursor: pointer;
+}
+
+.course ul li div::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    border: 5px #ddd solid;
+    opacity: 0;
+    transition-duration: 600ms;
+    transform: matrix(.5, 0, 0, .5, 0, 0);
+    pointer-events: none;
 }
 
 .course ul li div h2 {
     font-size: 72px;
+    line-height: 1;
+}
+
+.course ul li div span {
+    display: inline-block;
+    padding-bottom: 12px;
+}
+
+.course ul li div p {
+    transition-duration: 600ms;
 }
 
 .course ul li div a {
-    display: none;
+    display: inline-block;
+    opacity: 1;
+    padding: 12px 18px;
+    border: 2px #000 solid;
+    color: #000;
     opacity: 0;
+    transition-duration: 600ms;
+    transform: matrix(1, 0, 0, 1, 0, 30)
+}
+
+.course ul li div:hover::after {
+    opacity: 1;
+    transform: matrix(1, 0, 0, 1, 0, 0)
+}
+
+.course ul li div:hover p {
+    opacity: 0;
+}
+
+.course ul li div:hover a {
+    opacity: 1;
+    transform: matrix(1, 0, 0, 1, 0, 0)
+}
+
+.course ul li div a:hover {
+    color: #fff;
+    background-color: #000;
+}
+
+
+/* works */
+
+.works {
+    padding: 65px;
+    text-align: center;
+}
+
+.works h2 {
+    font-size: 30px;
+    color: #000;
+    font-weight: normal;
+    padding-bottom: 30px;
+}
+
+.works a {
+    display: inline-block;
+    line-height: 40px;
+    padding: 0 25px;
+    border: 1px #000 solid;
+    margin: 0 16px;
+    color: #000;
+    background-color: #d2d2d2;
+    border-radius: 20px;
 }

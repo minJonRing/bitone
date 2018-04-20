@@ -43,6 +43,12 @@
             </li>
         </ul>
     </div>
+    <div class="works">
+      <h2>作品展示</h2>
+      <div>
+        <router-link :to="item.link" v-for="(item,index) in works" :key="index">{{item.txt}}</router-link>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -64,6 +70,12 @@ export default {
         {link:"/",title:"aa",sub:"dadsa",txt:"件大事就打算的撒是"},
         {link:"/",title:"aa",sub:"dadsa",txt:"件大事就打算的撒是"},
         {link:"/",title:"aa",sub:"dadsa",txt:"件大事就打算的撒是"},
+      ],
+      works:[
+        {link:"/",txt:"全部"},
+        {link:"/",txt:"三维产品动画"},
+        {link:"/",txt:"影视广告TVC"},
+        {link:"/",txt:"地产创意工厂"}
       ]
     }
   },
